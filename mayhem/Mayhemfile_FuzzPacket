@@ -1,0 +1,8 @@
+project: gpsd
+target: FuzzPacket
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/FuzzPacket/testsuite
+cmds:
+  - cmd: /mayhem/FuzzPacket
+    libfuzzer: true

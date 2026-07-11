@@ -1,0 +1,9 @@
+project: gpsd
+target: FuzzDriversStructured
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/FuzzDriversStructured/testsuite
+cmds:
+  - cmd: /mayhem/FuzzDriversStructured
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/FuzzDrivers.dict
